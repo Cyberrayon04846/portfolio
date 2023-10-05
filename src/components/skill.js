@@ -2,10 +2,12 @@ import React, { useEffect, useState } from 'react';
 import '../style/skill.scss';
 import skillImage from '../assests/skillimage.png';
 const skillsData = [
-    { name: 'JavaScript', experience: 90 },
-    { name: 'React', experience: 85 },
-    { name: 'Node.js', experience: 80 },
-    { name: 'HTML/CSS', experience: 95 },
+    { name: 'JavaScript', experience: 80 },
+    { name: 'React', experience: 60 },
+    { name: 'Node.js', experience: 60 },
+    { name: 'HTML/CSS', experience: 90 },
+    { name: 'PHP', experience: 40 },
+    { name: 'DSA', experience: 50 },
     // Add more skills and experience levels here
   ];
   

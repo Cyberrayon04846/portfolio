@@ -1,0 +1,123 @@
+.skills-container {
+  margin-top: 40px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+  display: flex;
+  align-items: center;
+
+  &.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .skill-image {
+    margin-right: 20%;
+    margin-left: 20%;
+    // display: none;
+    img {
+      max-width: 700px; /* Set the maximum width for the image */
+      height: auto;
+    }
+  }
+  @media (max-width: 1502px) {
+    .skill-image {
+      display: none; /* Hide the image on tablet screens and below */
+    }
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  .skills-content {
+    max-width: 900px;
+
+    .skills-list {
+      max-width: 900px;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+
+      .skill {
+        width: calc(100.33% - 20px);
+        padding: 15px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease-in-out;
+        border-radius: 10px;
+
+        .skill-content {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 8px;
+
+          .skill-name {
+            font-size: 1.2rem;
+            text-align: left;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            flex-grow: 1;
+          }
+
+          .percentage {
+            font-size: 0.9rem;
+            color: #555;
+            margin-left: 10px;
+          }
+        }
+       &:hover {
+        transform: translateY(-5px); /* Move the skill card up on hover */
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Apply box shadow on hover */
+        transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+      }
+    }
+
+      .progress-bar {
+        width: 100%;
+        height: 10px;
+        background-color: #f9f9f9;
+        border-radius: 6px;
+        overflow: hidden;
+        position: relative;
+        animation: fillProgress 2s ease-in-out forwards; /* Auto-fill animation */
+
+        .progress {
+          height: 100%;
+          background-color: #007bff;
+          border-radius: 6px;
+          width: 0;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+        }
+      }
+
+      @keyframes fillProgress {
+        from {
+          width: 0%;
+        }
+        to {
+          width: 100%;
+        }
+      }
+
+      /* ... */
+
+     
+    }
+  }
+  @media (max-width: 1502px) {
+    width: calc(50% - 20px); /* Display 2 skills per row on smaller screens */
+    margin: auto;
+  }
+
+  @media (max-width: 780px) {
+    width: calc(70% - 20px);
+    margin-left: auto; /* Display 1 skill per row on even smaller screens */
+  }
+}

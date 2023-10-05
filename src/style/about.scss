@@ -31,9 +31,10 @@
       padding: 0 40px;
       .about-heading {
         font-size: 3rem;
-        margin-bottom: 20px;
+        margin-top: 5%;
+        margin-bottom: 1%;
         overflow: hidden;
-        white-space: nowrap;
+        white-space: pre-wrap;
         letter-spacing: 0.1em;
         position: relative;
         animation: typewriter 1s steps(40) forwards,
@@ -131,8 +132,9 @@
     margin-bottom: 20px; /* Add some spacing between image and text */
   }
   .about-heading {
-    font-size: 1rem;
-    margin-bottom: 20px;
+    font-size: 1%;
+    margin-bottom: 0.5%;
+    white-space: pre-wrap;
     word-wrap: break-word; /* Apply word wrap to the heading */
   }
 

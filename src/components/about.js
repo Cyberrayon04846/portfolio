@@ -21,6 +21,11 @@ const About = () => {
           </div>
           <div className="about-description">
             A passionate mern stack developer from India
+            A passionate mern stack developer from India
+            A passionate mern stack developer from India
+            A passionate mern stack developer from India
+            A passionate mern stack developer from India
+            A passionate mern stack developer from India
             {/* ... (your description) ... */}
           </div>
           <div className="resume-button">

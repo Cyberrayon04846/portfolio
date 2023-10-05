@@ -30,18 +30,17 @@
       text-align: left;
       padding: 0 40px;
       .about-heading {
-        font-size: 3rem;
-        margin-top: 5%;
-        margin-bottom: 1%;
+        font-size:190%;
+        margin-bottom: 20px;
         overflow: hidden;
-        white-space: pre-wrap;
+        white-space: nowrap;
         letter-spacing: 0.1em;
         position: relative;
         animation: typewriter 1s steps(40) forwards,
           moveUp 1s ease-in-out 1s forwards;
       }
       .about-description {
-        font-size: 1.5rem;
+        font-size: 100%;
         line-height: 1.5;
         opacity: 0;
         animation: fadeIn 1s ease-in-out 2s forwards;
@@ -109,10 +108,11 @@
         text-align: center;
         padding: 0;
         .about-heading {
-          font-size: 2rem;
+          font-size: 110%;
+          white-space: normal;
         }
         .about-description {
-          font-size: 1rem;
+          font-size: 90%;
         }
       }
       .developer-image {
@@ -132,13 +132,13 @@
     margin-bottom: 20px; /* Add some spacing between image and text */
   }
   .about-heading {
-    font-size: 1%;
-    margin-bottom: 0.5%;
-    white-space: pre-wrap;
-    word-wrap: break-word; /* Apply word wrap to the heading */
+    font-size: 90%;
+    margin-bottom: 20px;
+   white-space:normal;
   }
 
   .about-text {
     width: 100%; /* Make the text content take up the full width */
+    font-size: 70%;
   }
 }

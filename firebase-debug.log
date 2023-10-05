@@ -1,0 +1,111 @@
+[debug] [2023-10-05T06:01:44.452Z] ----------------------------------------------------------------------
+[debug] [2023-10-05T06:01:44.454Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\cyber\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-10-05T06:01:44.454Z] CLI Version:   12.6.2
+[debug] [2023-10-05T06:01:44.454Z] Platform:      win32
+[debug] [2023-10-05T06:01:44.455Z] Node Version:  v20.4.0
+[debug] [2023-10-05T06:01:44.455Z] Time:          Thu Oct 05 2023 11:31:44 GMT+0530 (India Standard Time)
+[debug] [2023-10-05T06:01:44.455Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-10-05T06:01:44.516Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-10-05T06:01:44.516Z] > authorizing via signed-in user (cyberrayon@gmail.com)
+[debug] [2023-10-05T06:01:44.516Z] [iam] checking project portfolio-cc30f for permissions ["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]
+[debug] [2023-10-05T06:01:44.518Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/portfolio-cc30f:testIamPermissions [none]
+[debug] [2023-10-05T06:01:44.519Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/portfolio-cc30f:testIamPermissions x-goog-quota-user=projects/portfolio-cc30f
+[debug] [2023-10-05T06:01:44.519Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/portfolio-cc30f:testIamPermissions {"permissions":["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]}
+[debug] [2023-10-05T06:01:46.264Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/portfolio-cc30f:testIamPermissions 200
+[debug] [2023-10-05T06:01:46.265Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/portfolio-cc30f:testIamPermissions {"permissions":["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]}
+[debug] [2023-10-05T06:01:46.265Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-cc30f [none]
+[debug] [2023-10-05T06:01:46.787Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-cc30f 200
+[debug] [2023-10-05T06:01:46.787Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-cc30f {"projectId":"portfolio-cc30f","projectNumber":"479666471434","displayName":"portfolio","name":"projects/portfolio-cc30f","resources":{"hostingSite":"portfolio-cc30f","realtimeDatabaseInstance":"portfolio-cc30f-default-rtdb"},"state":"ACTIVE","etag":"1_77c8e727-327a-4d99-a7f7-114db0ddb381"}
+[debug] [2023-10-05T06:01:46.788Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-cc30f [none]
+[debug] [2023-10-05T06:01:47.153Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-cc30f 200
+[debug] [2023-10-05T06:01:47.153Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-cc30f {"projectId":"portfolio-cc30f","projectNumber":"479666471434","displayName":"portfolio","name":"projects/portfolio-cc30f","resources":{"hostingSite":"portfolio-cc30f","realtimeDatabaseInstance":"portfolio-cc30f-default-rtdb"},"state":"ACTIVE","etag":"1_77c8e727-327a-4d99-a7f7-114db0ddb381"}
+[info] 
+[info] === Deploying to 'portfolio-cc30f'...
+[info] 
+[info] i  deploying database, hosting 
+[info] i  database: checking rules syntax... 
+[debug] [2023-10-05T06:01:47.157Z] >>> [apiv2][query] GET https://firebasedatabase.googleapis.com/v1beta/projects/portfolio-cc30f/locations/-/instances/portfolio-cc30f-default-rtdb [none]
+[debug] [2023-10-05T06:01:49.092Z] <<< [apiv2][status] GET https://firebasedatabase.googleapis.com/v1beta/projects/portfolio-cc30f/locations/-/instances/portfolio-cc30f-default-rtdb 200
+[debug] [2023-10-05T06:01:49.092Z] <<< [apiv2][body] GET https://firebasedatabase.googleapis.com/v1beta/projects/portfolio-cc30f/locations/-/instances/portfolio-cc30f-default-rtdb {"name":"projects/479666471434/locations/asia-southeast1/instances/portfolio-cc30f-default-rtdb","project":"projects/479666471434","databaseUrl":"https://portfolio-cc30f-default-rtdb.asia-southeast1.firebasedatabase.app","type":"DEFAULT_DATABASE","state":"ACTIVE"}
+[debug] [2023-10-05T06:01:49.093Z] >>> [apiv2][query] PUT https://portfolio-cc30f-default-rtdb.asia-southeast1.firebasedatabase.app/.settings/rules.json dryRun=true
+[debug] [2023-10-05T06:01:49.094Z] >>> [apiv2][body] PUT https://portfolio-cc30f-default-rtdb.asia-southeast1.firebasedatabase.app/.settings/rules.json "{\n  /* Visit https://firebase.google.com/docs/database/security to learn more about security rules. */\n  \"rules\": {\n    \".read\": false,\n    \".write\": false\n  }\n}"
+[debug] [2023-10-05T06:01:49.417Z] <<< [apiv2][status] PUT https://portfolio-cc30f-default-rtdb.asia-southeast1.firebasedatabase.app/.settings/rules.json 200
+[debug] [2023-10-05T06:01:49.417Z] <<< [apiv2][body] PUT https://portfolio-cc30f-default-rtdb.asia-southeast1.firebasedatabase.app/.settings/rules.json {"status":"ok"}
+[info] +  database: rules syntax for database portfolio-cc30f-default-rtdb is valid 
+[debug] [2023-10-05T06:01:49.420Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/portfolio-cc30f/versions [none]
+[debug] [2023-10-05T06:01:49.420Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/portfolio-cc30f/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2023-10-05T06:01:50.394Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/portfolio-cc30f/versions 200
+[debug] [2023-10-05T06:01:50.395Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/portfolio-cc30f/versions {"name":"projects/479666471434/sites/portfolio-cc30f/versions/c6e7e4a903d52057","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[portfolio-cc30f]: beginning deploy... 
+[info] i  hosting[portfolio-cc30f]: found 13 files in build 
+[debug] [2023-10-05T06:01:50.403Z] [hosting] uploading with 200 concurrency
+[debug] [2023-10-05T06:01:50.606Z] [hosting] hash cache [YnVpbGQ] stored for 13 files
+[debug] [2023-10-05T06:01:50.606Z] [hosting][hash queue][FINAL] {"max":198,"min":6,"avg":23.307692307692307,"active":0,"complete":13,"success":13,"errored":0,"retried":0,"total":13,"elapsed":202}
+[debug] [2023-10-05T06:01:50.606Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/479666471434/sites/portfolio-cc30f/versions/c6e7e4a903d52057:populateFiles [none]
+[debug] [2023-10-05T06:01:50.606Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/479666471434/sites/portfolio-cc30f/versions/c6e7e4a903d52057:populateFiles {"files":{"/asset-manifest.json":"ad33971a8682ac2327683778407fd9f2efea41c4edc7f34dbe2128731e068647","/index.html":"b89f36410305745e16a73b5c7fb2bfaa545033d91024ba90264029e6954b1268","/static/css/main.1e96bad2.css":"1634462438160cf569d6349c1a1ceeadfb7262c8b37beb680d00d138a2c5dc1e","/static/js/787.1ed0c42c.chunk.js":"02025b96a2b26a33d8109ba47caa48b8f3c7d1ceccc995b7fc1434a65558fb0b","/static/js/main.22e2915f.js.LICENSE.txt":"a1e10079e8155bc5525d13d0464e64acbd892cb93e51621cce5f31f1c4cc8fe3","/static/css/main.1e96bad2.css.map":"b940fd1260f5a8645cccfe610e819481b971a92dd5c63f904fda0e46a8fae502","/static/js/787.1ed0c42c.chunk.js.map":"35dd119f1344b7e0cc00af4f20efa880f26aa93dbb5838b7c8287157b205a113","/static/media/devloperImage.8faa91faf18121bd40fa.png":"829d17a9f79527a15b4ff319d153e5517befe630bafb36fc8236606e4b7db377","/static/media/resume.59031360ad8d2fc010cf.pdf":"44fdc0147dc7023d52dfd17d3395d1d65138d4bf2c6fdda09c28d5a4e477eb2d","/static/media/chatImage.aa55654235d2e8e59d8e.png":"c2d4480d73abe8f0390a33a1c7b9c9f90cceb6f7fe7aa77dfd7a724e6ec8182a","/static/js/main.22e2915f.js":"f3540f645f063757b456d40158980fe6dc03d9cc7e4de23ac6dccac81283802e","/static/media/portfolio.ccba4f912d433998087f.png":"da60de7c4894d512f661858a916b59abaea557f885c4b46b19dcb61f4aa4b33a","/static/js/main.22e2915f.js.map":"4c5dfe9a3149d4c873953f83bb6760d7b073d5555499b6efa20f77a2fc49d6b8"}}
+[debug] [2023-10-05T06:01:51.150Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/479666471434/sites/portfolio-cc30f/versions/c6e7e4a903d52057:populateFiles 200
+[debug] [2023-10-05T06:01:51.150Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/479666471434/sites/portfolio-cc30f/versions/c6e7e4a903d52057:populateFiles {"uploadRequiredHashes":["4c5dfe9a3149d4c873953f83bb6760d7b073d5555499b6efa20f77a2fc49d6b8","b89f36410305745e16a73b5c7fb2bfaa545033d91024ba90264029e6954b1268","f3540f645f063757b456d40158980fe6dc03d9cc7e4de23ac6dccac81283802e","ad33971a8682ac2327683778407fd9f2efea41c4edc7f34dbe2128731e068647"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/portfolio-cc30f/versions/c6e7e4a903d52057/files"}
+[debug] [2023-10-05T06:01:51.151Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/portfolio-cc30f/versions/c6e7e4a903d52057/files/4c5dfe9a3149d4c873953f83bb6760d7b073d5555499b6efa20f77a2fc49d6b8 [none]
+[debug] [2023-10-05T06:01:51.151Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/portfolio-cc30f/versions/c6e7e4a903d52057/files/4c5dfe9a3149d4c873953f83bb6760d7b073d5555499b6efa20f77a2fc49d6b8 [stream]
+[debug] [2023-10-05T06:01:51.152Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/portfolio-cc30f/versions/c6e7e4a903d52057/files/b89f36410305745e16a73b5c7fb2bfaa545033d91024ba90264029e6954b1268 [none]
+[debug] [2023-10-05T06:01:51.152Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/portfolio-cc30f/versions/c6e7e4a903d52057/files/b89f36410305745e16a73b5c7fb2bfaa545033d91024ba90264029e6954b1268 [stream]
+[debug] [2023-10-05T06:01:51.152Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/portfolio-cc30f/versions/c6e7e4a903d52057/files/f3540f645f063757b456d40158980fe6dc03d9cc7e4de23ac6dccac81283802e [none]
+[debug] [2023-10-05T06:01:51.152Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/portfolio-cc30f/versions/c6e7e4a903d52057/files/f3540f645f063757b456d40158980fe6dc03d9cc7e4de23ac6dccac81283802e [stream]
+[debug] [2023-10-05T06:01:51.153Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/portfolio-cc30f/versions/c6e7e4a903d52057/files/ad33971a8682ac2327683778407fd9f2efea41c4edc7f34dbe2128731e068647 [none]
+[debug] [2023-10-05T06:01:51.153Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/portfolio-cc30f/versions/c6e7e4a903d52057/files/ad33971a8682ac2327683778407fd9f2efea41c4edc7f34dbe2128731e068647 [stream]
+[debug] [2023-10-05T06:01:51.154Z] [hosting][populate queue][FINAL] {"max":545,"min":545,"avg":545,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":549}
+[debug] [2023-10-05T06:01:51.155Z] [hosting] uploads queued: 4
+[debug] [2023-10-05T06:01:52.617Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/portfolio-cc30f/versions/c6e7e4a903d52057/files/b89f36410305745e16a73b5c7fb2bfaa545033d91024ba90264029e6954b1268 200
+[debug] [2023-10-05T06:01:52.617Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/portfolio-cc30f/versions/c6e7e4a903d52057/files/b89f36410305745e16a73b5c7fb2bfaa545033d91024ba90264029e6954b1268 [stream]
+[debug] [2023-10-05T06:01:52.677Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/portfolio-cc30f/versions/c6e7e4a903d52057/files/ad33971a8682ac2327683778407fd9f2efea41c4edc7f34dbe2128731e068647 200
+[debug] [2023-10-05T06:01:52.678Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/portfolio-cc30f/versions/c6e7e4a903d52057/files/ad33971a8682ac2327683778407fd9f2efea41c4edc7f34dbe2128731e068647 [stream]
+[debug] [2023-10-05T06:01:53.024Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/portfolio-cc30f/versions/c6e7e4a903d52057/files/f3540f645f063757b456d40158980fe6dc03d9cc7e4de23ac6dccac81283802e 200
+[debug] [2023-10-05T06:01:53.024Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/portfolio-cc30f/versions/c6e7e4a903d52057/files/f3540f645f063757b456d40158980fe6dc03d9cc7e4de23ac6dccac81283802e [stream]
+[debug] [2023-10-05T06:01:54.021Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/portfolio-cc30f/versions/c6e7e4a903d52057/files/4c5dfe9a3149d4c873953f83bb6760d7b073d5555499b6efa20f77a2fc49d6b8 200
+[debug] [2023-10-05T06:01:54.021Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/portfolio-cc30f/versions/c6e7e4a903d52057/files/4c5dfe9a3149d4c873953f83bb6760d7b073d5555499b6efa20f77a2fc49d6b8 [stream]
+[debug] [2023-10-05T06:01:54.021Z] [hosting][upload queue][FINAL] {"max":2871,"min":1467,"avg":1935,"active":0,"complete":4,"success":4,"errored":0,"retried":0,"total":4,"elapsed":2871}
+[info] +  hosting[portfolio-cc30f]: file upload complete 
+[debug] [2023-10-05T06:01:54.022Z] [hosting] deploy completed after 3626ms
+[info] i  database: releasing rules... 
+[debug] [2023-10-05T06:01:54.023Z] >>> [apiv2][query] GET https://firebasedatabase.googleapis.com/v1beta/projects/portfolio-cc30f/locations/-/instances/portfolio-cc30f-default-rtdb [none]
+[debug] [2023-10-05T06:01:54.425Z] <<< [apiv2][status] GET https://firebasedatabase.googleapis.com/v1beta/projects/portfolio-cc30f/locations/-/instances/portfolio-cc30f-default-rtdb 200
+[debug] [2023-10-05T06:01:54.425Z] <<< [apiv2][body] GET https://firebasedatabase.googleapis.com/v1beta/projects/portfolio-cc30f/locations/-/instances/portfolio-cc30f-default-rtdb {"name":"projects/479666471434/locations/asia-southeast1/instances/portfolio-cc30f-default-rtdb","project":"projects/479666471434","databaseUrl":"https://portfolio-cc30f-default-rtdb.asia-southeast1.firebasedatabase.app","type":"DEFAULT_DATABASE","state":"ACTIVE"}
+[debug] [2023-10-05T06:01:54.426Z] >>> [apiv2][query] PUT https://portfolio-cc30f-default-rtdb.asia-southeast1.firebasedatabase.app/.settings/rules.json 
+[debug] [2023-10-05T06:01:54.426Z] >>> [apiv2][body] PUT https://portfolio-cc30f-default-rtdb.asia-southeast1.firebasedatabase.app/.settings/rules.json "{\n  /* Visit https://firebase.google.com/docs/database/security to learn more about security rules. */\n  \"rules\": {\n    \".read\": false,\n    \".write\": false\n  }\n}"
+[debug] [2023-10-05T06:01:55.097Z] <<< [apiv2][status] PUT https://portfolio-cc30f-default-rtdb.asia-southeast1.firebasedatabase.app/.settings/rules.json 200
+[debug] [2023-10-05T06:01:55.097Z] <<< [apiv2][body] PUT https://portfolio-cc30f-default-rtdb.asia-southeast1.firebasedatabase.app/.settings/rules.json {"status":"ok"}
+[info] +  database: rules for database portfolio-cc30f-default-rtdb released successfully 
+[debug] [2023-10-05T06:01:55.098Z] [
+  {
+    "config": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "site": "portfolio-cc30f"
+    },
+    "version": "projects/479666471434/sites/portfolio-cc30f/versions/c6e7e4a903d52057"
+  }
+]
+[info] i  hosting[portfolio-cc30f]: finalizing version... 
+[debug] [2023-10-05T06:01:55.099Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/portfolio-cc30f/versions/c6e7e4a903d52057 updateMask=status%2Cconfig
+[debug] [2023-10-05T06:01:55.099Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/portfolio-cc30f/versions/c6e7e4a903d52057 {"status":"FINALIZED","config":{}}
+[debug] [2023-10-05T06:01:55.608Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/portfolio-cc30f/versions/c6e7e4a903d52057 200
+[debug] [2023-10-05T06:01:55.609Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/portfolio-cc30f/versions/c6e7e4a903d52057 {"name":"projects/479666471434/sites/portfolio-cc30f/versions/c6e7e4a903d52057","status":"FINALIZED","config":{},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2023-10-05T06:01:50.661982Z","createUser":{"email":"cyberrayon@gmail.com"},"finalizeTime":"2023-10-05T06:01:56.099675Z","finalizeUser":{"email":"cyberrayon@gmail.com"}}
+[debug] [2023-10-05T06:01:55.609Z] [hosting] finalized version for portfolio-cc30f:[object Object]
+[info] +  hosting[portfolio-cc30f]: version finalized 
+[info] i  hosting[portfolio-cc30f]: releasing new version... 
+[debug] [2023-10-05T06:01:55.609Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/portfolio-cc30f/channels/live/releases versionName=projects%2F479666471434%2Fsites%2Fportfolio-cc30f%2Fversions%2Fc6e7e4a903d52057
+[debug] [2023-10-05T06:01:55.610Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/portfolio-cc30f/channels/live/releases {}
+[debug] [2023-10-05T06:01:56.127Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/portfolio-cc30f/channels/live/releases 200
+[debug] [2023-10-05T06:01:56.127Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/portfolio-cc30f/channels/live/releases {"name":"projects/479666471434/sites/portfolio-cc30f/channels/live/releases/1696485716038000","version":{"name":"projects/479666471434/sites/portfolio-cc30f/versions/c6e7e4a903d52057","status":"FINALIZED","config":{},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2023-10-05T06:01:50.661982Z","createUser":{"email":"cyberrayon@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocIISmeESu4CygKaEHMwwguySfPpEYdrmxuoqmqqTFb89L0"},"finalizeTime":"2023-10-05T06:01:56.099675Z","finalizeUser":{"email":"cyberrayon@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocIISmeESu4CygKaEHMwwguySfPpEYdrmxuoqmqqTFb89L0"}},"type":"DEPLOY","releaseTime":"2023-10-05T06:01:56.038Z","releaseUser":{"email":"cyberrayon@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocIISmeESu4CygKaEHMwwguySfPpEYdrmxuoqmqqTFb89L0"}}
+[debug] [2023-10-05T06:01:56.127Z] [hosting] release: {"name":"projects/479666471434/sites/portfolio-cc30f/channels/live/releases/1696485716038000","version":{"name":"projects/479666471434/sites/portfolio-cc30f/versions/c6e7e4a903d52057","status":"FINALIZED","config":{},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2023-10-05T06:01:50.661982Z","createUser":{"email":"cyberrayon@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocIISmeESu4CygKaEHMwwguySfPpEYdrmxuoqmqqTFb89L0"},"finalizeTime":"2023-10-05T06:01:56.099675Z","finalizeUser":{"email":"cyberrayon@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocIISmeESu4CygKaEHMwwguySfPpEYdrmxuoqmqqTFb89L0"}},"type":"DEPLOY","releaseTime":"2023-10-05T06:01:56.038Z","releaseUser":{"email":"cyberrayon@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocIISmeESu4CygKaEHMwwguySfPpEYdrmxuoqmqqTFb89L0"}}
+[info] +  hosting[portfolio-cc30f]: release complete 
+[info] 
+[info] +  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/portfolio-cc30f/overview
+[info] Hosting URL: https://portfolio-cc30f.web.app

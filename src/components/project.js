@@ -13,7 +13,7 @@ const projectsData = [
   {
     title: "Personal Portfolio",
     description: "MY presonl created using react js",
-    githubLink: "https://github.com/username/project2",
+    githubLink: "https://github.com/Cyberrayon04846/portfolio",
     image: portfolio,
   },
  

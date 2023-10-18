@@ -3,7 +3,7 @@ import "../style/ProjectCard.scss";
 
 const ProjectCard = ({ title, description, githubLink, backgroundImage }) => {
   return (
-    <div className="project-card" style={{ backgroundImage: `url(${backgroundImage})` }}>
+    <div className="project-card" style={{ backgroundImage: `url(${backgroundImage})` }} >
      
       <h3>{title}</h3>
       <p>{description}</p>

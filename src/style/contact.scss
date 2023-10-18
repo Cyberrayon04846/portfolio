@@ -4,18 +4,19 @@
   padding: 50px;
   background-color: #f9f9f9;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Add a subtle shadow to the container */
+  
 }
 
 .social-icons {
-  margin-top: 20px;
-  font-size: 2rem;
+  // margin-top: 20px;
+  // font-size: 2rem;
   display: flex;
   justify-content: center; /* Center the icons horizontally */
 
   a {
     color: #fff;
     background-color: #007bff;
-    border-radius: 50%; /* Make the icons circular */
+    border-radius: 30%; /* Make the icons circular */
     padding: 10px;
     margin: 0 10px;
     transition: all 0.3s ease-in-out;
@@ -29,13 +30,18 @@
   }
 }
 
+
 @media (max-width: 768px) {
+.contact-container{
+  display: flex;
+flex-direction: column;
   .social-icons {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center; /* Center the icons vertically */
 
     a {
-      margin: 10px 0;
+      // margin: 10px 0;
     }
   }
+}
 }
